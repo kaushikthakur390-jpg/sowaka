@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sowaka Holistic Health</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-fixed": "#002115",
+                "sage": "#E4ECDD",
+                "surface-container-highest": "#d4e8cf",
+                "surface-container": "#dff4da",
+                "background": "#ebffe6",
+                "outline": "#717973",
+                "on-tertiary-fixed": "#191d15",
+                "primary-fixed-dim": "#a6d0b9",
+                "secondary": "#316852",
+                "tertiary-fixed-dim": "#c5c8bc",
+                "on-error-container": "#93000a",
+                "error-container": "#ffdad6",
+                "border-subtle": "#DCE4D4",
+                "surface-tint": "#406653",
+                "on-primary": "#ffffff",
+                "primary-fixed": "#c2ecd4",
+                "surface-variant": "#d4e8cf",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed-variant": "#45483f",
+                "surface-bright": "#ebffe6",
+                "text-secondary": "#4F5D50",
+                "surface-dim": "#cce0c6",
+                "on-error": "#ffffff",
+                "tertiary-fixed": "#e1e4d8",
+                "error": "#ba1a1a",
+                "primary-container": "#0c3424",
+                "on-primary-container": "#769e88",
+                "on-secondary-container": "#366d56",
+                "on-primary-fixed-variant": "#284e3c",
+                "on-secondary-fixed-variant": "#16503b",
+                "primary-card": "#FCFCF4",
+                "secondary-card": "#F4F4EC",
+                "secondary-fixed-dim": "#99d3b7",
+                "inverse-primary": "#a6d0b9",
+                "secondary-fixed": "#b5efd3",
+                "on-surface-variant": "#414844",
+                "on-primary-fixed": "#002114",
+                "on-tertiary-container": "#94968c",
+                "on-tertiary": "#ffffff",
+                "surface-container-low": "#e5f9df",
+                "text-muted": "#637064",
+                "surface": "#ebffe6",
+                "on-background": "#0f1f10",
+                "tertiary": "#171a13",
+                "secondary-container": "#b2ecd0",
+                "tertiary-container": "#2c2f27",
+                "base-sage": "#F0F2E6",
+                "on-surface": "#0f1f10",
+                "inverse-surface": "#243423",
+                "primary": "#001e12",
+                "surface-container-high": "#daeed4",
+                "surface-container-lowest": "#ffffff",
+                "inverse-on-surface": "#e2f7dd",
+                "outline-variant": "#c1c8c2",
+                "light-sage": "#ECF4E4",
+                
+                // Keep some existing colors that might be explicitly used in inline styles or classes
+                "line-200": "#D7DED7",
+                "cream-50": "#F7F3EA",
+                "sage-100": "#DCE9D7",
+                "forest-700": "#2E6B50",
+                "ink-900": "#18231E",
+                "muted-600": "#637069",
+                "paper-0": "#FFFDF8"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-md": "1rem",
+                "stack-lg": "2rem",
+                "stack-sm": "0.5rem",
+                "section-gap": "5rem",
+                "gutter": "1.5rem",
+                "margin-mobile": "1rem",
+                "margin-desktop": "2.5rem"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Manrope"
+                ],
+                "display-lg-mobile": [
+                        "Poppins"
+                ],
+                "headline-md": [
+                        "Poppins"
+                ],
+                "display-lg": [
+                        "Poppins"
+                ],
+                "body-lg": [
+                        "Manrope"
+                ],
+                "label-md": [
+                        "Manrope"
+                ],
+                "label-sm": [
+                        "Manrope"
+                ],
+                "headline-lg": [
+                        "Poppins"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-lg": [
+                        "56px",
+                        {
+                                "lineHeight": "64px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ]
+        },
+        boxShadow: {soft: "0 8px 30px rgba(24, 35, 30, 0.04)", elevated: "0 18px 50px rgba(24, 35, 30, 0.08)"}
+},
+    },
+  };</script>
+<style>
+        .glass-panel {
+            background: rgba(247, 243, 234, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .animated-list-container {
+            position: relative;
+            height: 120px; /* fixed height for content area */
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .animated-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            pointer-events: none;
+        }
+        
+        .animated-item.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animated-item {
+                transition: opacity 0.5s ease;
+                transform: none;
+            }
+        }
+        
+        /* Carousel Styles */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
+            align-items: flex-start;
+        }
+
+        .testimonial-viewport {
+            overflow: hidden;
+            position: relative;
+            transition: height 0.5s ease;
+        }
+
+        .testimonial-viewport .carousel-track > * {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        .rotating-condition {
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-sage-100 selection:text-primary bg-cream-50 text-ink-900">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-line-200/50 border-line-200 bg-cream-50" id="navbar" style="background-color: rgb(240, 242, 230);">
+<div class="flex justify-between items-center h-20 px-gutter md:px-margin-desktop max-w-[1440px] mx-auto">
+<a class="flex items-center h-full" href="#"><img alt="Sowaka Logo" class="h-14 md:h-16 w-auto object-contain bg-cream-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXEmKSduzlT6w7U1zK1RPwiCUNmd3SH1zF2_kyzBr_GxymajlT_IJOarBEB8bb5UUkpYdvd7eBTYi640BCWrs9-bS2SKEvbm4U1XToYeGclE-61GkpR_SIBNGINCV7mgZ_eElR4EVnP9bWAiGR-IrEdgaK6yoDI1DIl_YCiIoBQed--Qowy_Sbl8ktKItGYVhaAHzZnscfF44uNHnHFQjjyfuJXxVyAT467xCDyRLXjvs1ARlEetFbnefe8gXxSLz0HL23ZFk7pTwV2L8"/></a>
+<div class="hidden md:flex items-center space-x-10"><a class="font-label-md text-label-md hover:text-forest-700 transition-colors duration-300 text-primary-container" href="#practices">Conditions we treat</a><a class="font-label-md text-label-md hover:text-forest-700 transition-colors duration-300 text-primary-container" href="#therapies">Therapies</a><a class="font-label-md text-label-md hover:text-forest-700 transition-colors duration-300 text-primary-container" href="#meet-shweta">About</a><a class="font-label-md text-label-md hover:text-forest-700 transition-colors duration-300 text-primary-container" href="#stories">Patient Stories</a><a class="font-label-md text-label-md hover:text-forest-700 transition-colors duration-300 text-primary-container" href="#location">Locations</a><a class="font-label-md text-label-md hover:text-forest-700 transition-colors duration-300 text-primary-container" href="#workshop">Workshop</a><a class="font-label-md text-label-md hover:text-forest-700 transition-colors duration-300 text-primary-container" href="#gallery">Gallery</a></div>
+<div class="flex items-center space-x-4">
+<a class="hidden md:inline-flex items-center justify-center bg-primary font-label-md text-label-md px-7 py-3 rounded-full hover:bg-primary-container transition-colors bg-primary-container text-cream-50" href="#">Book Consultation</a>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Bottom Nav Bar (Persistent CTA) -->
+<div class="md:hidden fixed bottom-0 w-full z-50 bg-cream-50/95 backdrop-blur-md border-t border-line-200/50 p-4 flex gap-4 pb-safe">
+<a class="flex-1 flex items-center justify-center bg-accent-light text-primary font-label-md text-label-md px-4 py-3.5 rounded-full" href="#">WhatsApp</a>
+<a class="flex-1 flex items-center justify-center bg-primary text-white font-label-md text-label-md px-4 py-3.5 rounded-full shadow-elevated" href="#">Book Consult</a>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-4 pb-12">
+<div class="absolute inset-0 z-0">
+<img alt="Holistic wellness background" class="w-full h-full object-cover object-center opacity-90" data-alt="A serene and minimalist holistic wellness clinic interior, featuring warm organic textures, soft natural lighting, and calming earthy tones. The setting evokes a sense of deep relaxation and professional care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl-n3i6oLStMTWZpOc4nQpe5X_jcd8R2psq377DCtvoZ9aGiveeCOAvTbKJuRydsNQ7LZWnn8Q0zCZRTEkGAUBsTazVCNEL6RLoc-RKF9r_SxroQ_SG4vWYk_Dkd1g3sLBfoCeNbVcEGwOL0wyi2KesV7zTFLMQz4_vVKOlknoXgYLVAp3dgOzMd3znv28Dje0PTA51tUROXzDjdGpXYun7T9rGkRXQih5rRSZGXODI8Cu19Icqedkxx12x9jCGaO3GKA"/>
+<div class="absolute inset-0 bg-gradient-to-b from-cream-50/40 via-transparent to-background/90"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-[1000px] mx-auto mt-12 md:mt-24 glass-panel p-8 md:p-16 rounded-[32px] shadow-soft">
+<span class="inline-block text-forest-700 font-label-sm text-label-sm uppercase tracking-[0.1em] mb-6">Holistic Pain Management &amp; Wellbeing</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">
+            Personalized care for pain, stress &amp; everyday wellbeing.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+            A practitioner-led approach combining holistic therapies around your individual needs.
+        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-all shadow-elevated" href="#">Book a Consultation</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-all shadow-elevated" href="#">WhatsApp Sowaka</a>
+</div>
+</div>
+</section>
+<!-- Trust Strip -->
+<!-- What brings you here? -->
+<section class="px-margin-mobile md:px-margin-desktop bg-cream-50 py-4" id="practices" style="background-color: rgb(240, 242, 230);"><div class="max-w-[92%] mx-auto bg-[#ECF4E4] rounded-[32px] border border-[#0C3424]/20 px-8 py-16 md:px-16">
+<div class="text-center mb-8">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">What brings you here?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Select what you're experiencing to see how we can help structure a holistic approach for your wellbeing.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="animated-cards-container"><!-- Card 1: Nervous System -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="nervous-system" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Nervous System</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">psychology</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Hemiplegia&quot;, &quot;Vertigo&quot;, &quot;Headache&quot;, &quot;Neuralgia&quot;]">Hemiplegia</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 2: Respiratory -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="respiratory" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Respiratory</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">air</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Bronchial Asthma&quot;, &quot;Sinusitis&quot;, &quot;Allergic Rhinitis&quot;, &quot;Breathing Difficulty&quot;]">Bronchial Asthma</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 3: Cardio-Vascular -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="cardio" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Cardio-Vascular</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">monitor_heart</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Angina Pectoris&quot;, &quot;Hypertension&quot;, &quot;Palpitations&quot;, &quot;Circulation Concerns&quot;]">Angina Pectoris</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 4: Digestive -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="digestive" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Digestive</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">restaurant</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;IBS&quot;, &quot;Acidity&quot;, &quot;Bloating&quot;, &quot;Digestive Discomfort&quot;]">IBS</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 5: Liver & Gall Bladder -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="liver" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Liver &amp; Gall Bladder</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">medical_services</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Jaundice&quot;, &quot;Fatty Liver&quot;, &quot;Digestive Support&quot;, &quot;Liver Wellness&quot;]">Jaundice</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 6: Genito-Urinary -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="genito-urinary" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Genito-Urinary</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">water_drop</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;UTI&quot;, &quot;Urinary Discomfort&quot;, &quot;Kidney Support&quot;, &quot;Bladder Concerns&quot;]">UTI</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 7: Obstetrics/Gynaecology -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="gynaecology" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight break-words whitespace-normal pr-8">Gynaecology</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">pregnant_woman</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Infertility&quot;, &quot;PCOS&quot;, &quot;Menstrual Concerns&quot;, &quot;Women’s Wellness&quot;]">Infertility</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 8: Endocrine -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="endocrine" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Endocrine</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">science</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Diabetes&quot;, &quot;Thyroid Concerns&quot;, &quot;Metabolic Health&quot;, &quot;Hormonal Balance&quot;]">Diabetes</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 9: Bones/Joints -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="bones" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Bones &amp; Joints</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">orthopedics</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Sciatica&quot;, &quot;Back Pain&quot;, &quot;Neck Pain&quot;, &quot;Joint Pain&quot;]">Sciatica</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 10: Sense Organs -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="sense-organs" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Sense Organs</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">visibility</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Tinnitus&quot;, &quot;Headache&quot;, &quot;Sinus Concerns&quot;, &quot;Eye Strain&quot;]">Tinnitus</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 11: Skin -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="skin" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Skin</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">face</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Psoriasis&quot;, &quot;Eczema&quot;, &quot;Skin Concerns&quot;, &quot;Acne&quot;]">Psoriasis</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 12: Cosmetic -->
+<a class="group block bg-[#FCFCF4] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-500 border border-line-200/50 hover:border-sage-100 relative overflow-hidden flex flex-col" data-category="cosmetic" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-forest-700 uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Cosmetic</h3><span class="material-symbols-outlined text-3xl text-forest-700 shrink-0 ml-2">self_improvement</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-primary font-semibold"><span class="rotating-condition" data-conditions="[&quot;Obesity&quot;, &quot;Weight Management&quot;, &quot;Body Wellness&quot;, &quot;Lifestyle Support&quot;]">Obesity</span></p><p class="text-body-md text-on-surface-variant leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center text-forest-700 font-label-sm group-hover:translate-x-1 transition-transform mt-auto"><span class="">Explore</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a>
+<!-- Card 13: Psychological -->
+<div class="lg:col-span-4 flex justify-center"><a class="group block bg-[#0C3424] text-[#F7F3EA] rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]" data-category="psychological" href="#"><div class="flex flex-col h-full px-7 py-5 gap-1 text-[#F7F3EA]"><div class="flex items-start justify-between"><h3 class="font-headline-md text-headline-md text-[#F7F3EA] uppercase tracking-wide font-semibold leading-tight pr-8 whitespace-normal">Psychological</h3><span class="material-symbols-outlined text-3xl shrink-0 text-[#F7F3EA] ml-2">psychology_alt</span></div><div class="flex flex-col gap-0 mb-1"><p class="text-body-lg text-[#F7F3EA] font-semibold"><span class="rotating-condition" data-conditions="[&quot;Addictions&quot;, &quot;Stress&quot;, &quot;Sleep Concerns&quot;, &quot;Emotional Wellbeing&quot;]">Addictions</span></p><p class="text-body-md text-[#F7F3EA]/80 leading-snug">Personalized care focused on your individual symptoms and history.</p></div><div class="flex items-center font-label-sm group-hover:translate-x-1 transition-transform text-[#F7F3EA] mt-auto"><span class="">Start here</span><span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></div></div></a></div></div>
+</div></section>
+<!-- Why Choose Sowaka -->
+<div class="py-4 flex items-center justify-center bg-cream-50"><div class="w-4/5 flex items-center justify-center relative"><div class="absolute w-full h-[1px] bg-forest-700/20" style="background-color: rgba(12, 52, 36, 0.2);"></div><div class="relative px-4 bg-transparent"><span class="material-symbols-outlined text-[10px] text-forest-700" style="color: rgba(12, 52, 36, 0.5); font-size: 6px;">diamond</span></div></div></div><section class="px-margin-mobile md:px-margin-desktop bg-background py-12" id="why-sowaka" style="background-color: rgb(236, 244, 228);"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop"><div class="text-center mb-16"><h2 class="font-display-lg text-display-lg text-primary mb-4">Why Sowaka</h2><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Your body is unique. Your care should be unique too.</p></div><div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-12 lg:gap-8 items-start justify-items-center"><div class="flex flex-col items-center text-center group"><span class="material-symbols-outlined text-[48px] md:text-[64px] text-forest-700 mb-4 transition-transform duration-300 group-hover:scale-110">healing</span><h3 class="font-headline-md text-xl md:text-2xl text-primary leading-tight">Instant Pain Relief</h3></div><div class="flex flex-col items-center text-center group"><span class="material-symbols-outlined text-[48px] md:text-[64px] text-forest-700 mb-4 transition-transform duration-300 group-hover:scale-110">target</span><h3 class="font-headline-md text-xl md:text-2xl text-primary leading-tight">Treatment from Root Cause</h3></div><div class="flex flex-col items-center text-center group"><span class="material-symbols-outlined text-[48px] md:text-[64px] text-forest-700 mb-4 transition-transform duration-300 group-hover:scale-110">eco</span><h3 class="font-headline-md text-xl md:text-2xl text-primary leading-tight">Drugless Approach</h3></div><div class="flex flex-col items-center text-center group"><span class="material-symbols-outlined text-[48px] md:text-[64px] text-forest-700 mb-4 transition-transform duration-300 group-hover:scale-110">verified_user</span><h3 class="font-headline-md text-xl md:text-2xl text-primary leading-tight">Zero Side Effects</h3></div><div class="flex flex-col items-center text-center group"><span class="material-symbols-outlined text-[48px] md:text-[64px] text-forest-700 mb-4 transition-transform duration-300 group-hover:scale-110">spa</span><h3 class="font-headline-md text-xl md:text-2xl text-primary leading-tight">Holistic Approach</h3></div><div class="flex flex-col items-center text-center group"><span class="material-symbols-outlined text-[48px] md:text-[64px] text-forest-700 mb-4 transition-transform duration-300 group-hover:scale-110">person</span><h3 class="font-headline-md text-xl md:text-2xl text-primary leading-tight">Personalized Care</h3></div></div></div></section>
+<!-- Five Element Theory -->
+<div class="py-4 flex items-center justify-center bg-cream-50"><div class="w-4/5 flex items-center justify-center relative"><div class="absolute w-full h-[1px] bg-forest-700/20" style="background-color: rgba(12, 52, 36, 0.2);"></div><div class="relative px-4 bg-transparent"><span class="material-symbols-outlined text-[10px] text-forest-700" style="color: rgba(12, 52, 36, 0.5); font-size: 6px;">diamond</span></div></div></div><section class="py-20 px-margin-mobile md:px-margin-desktop bg-cream-50 relative overflow-hidden" id="five-element" style="background-color: rgb(228, 236, 221);"><div class="relative z-10 max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"><div class="text-left"><span class="inline-block text-forest-700 font-label-sm text-label-sm uppercase tracking-[0.1em] mb-6">OUR APPROACH</span><h2 class="font-display-lg text-display-lg text-primary mb-8">Understanding the whole, not just the symptom.</h2><p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Sowaka's approach draws from holistic traditions that view wellbeing as interconnected. Five Element Theory forms part of the framework through which we explore balance and individual wellbeing.</p></div><div class="relative aspect-square overflow-hidden rounded-[2rem] shadow-elevated">
+<img alt="Five Element Theory Diagram" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhukXjoGMLfNWkX7r10FEGTFtC-SQnpdr5ZVYyBSqSDclfhjItddH0nbylOOfPq6Ah-kszGYMyJ-qwkzitu2-lxL4df730AW4S0IhnnF4C7tkIL2Jwvqq3L_fcM34orwa6qJHy-f7HWC-demD9uj08O2M8mYXGzVJPtBYubktsvaGSgWzt3dBGIjGPMrlcihnKyVj5Re_VtQPCsW6aBeakssUE8CegfIjmEmVKDZWP2IuEAB-PUOCRThAB5Kf1N-URaNk"/>
+</div></div></section>
+<!-- Who Can We Help? -->
+<div class="py-4 flex items-center justify-center bg-cream-50"><div class="w-4/5 flex items-center justify-center relative"><div class="absolute w-full h-[1px] bg-forest-700/20" style="background-color: rgba(12, 52, 36, 0.2);"></div><div class="relative px-4 bg-transparent"><span class="material-symbols-outlined text-[10px] text-forest-700" style="color: rgba(12, 52, 36, 0.5); font-size: 6px;">diamond</span></div></div></div><section class="py-20 px-margin-mobile md:px-margin-desktop bg-background" id="who-can-we-help" style="background-color: rgb(240, 242, 230); padding-top: 80px; padding-bottom: 70px;"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop"><div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Wellbeing looks different at every stage of life.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-3xl">
+    Whether you're finding your balance as a child, navigating change as a young adult, building a life with someone you love, managing the demands of work, or embracing your later years — Sowaka is here to help you feel healthier, happier and more balanced.
+  </p>
+<div class="w-full md:w-[65%] overflow-hidden rounded-[2rem] shadow-elevated mx-auto">
+<img alt="Diverse group of people representing different stages of life" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCtsJyPT7RxfykFKde9KaEMW3nJ2dIhpFaPxo-T0K3v68yhN7kP2oe3Pmaj_mXYFlpaOpx8HbVkeo7977cJS66ncLkZ9phPTSdidinsSqpb9olsqigu5OTelJCm_N_puKEu7jS2eq_yuXrqIwwbDb745iZZSDfvLxmvlbvJ5K3uJNbzC0iA1aQO2TEJ6DGs_g7RT8Yoas_AJ3wDQeVqfqabdHC9gxOuG78W5kifsDyQnXTL53jtOKRgJACPM87NUB6aoE"/>
+</div>
+</div></div></section>
+<!-- The Sowaka Story -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-cream-50" id="sowaka-story" style="background-color: rgb(240, 242, 230);">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-center">
+<div class="md:col-span-6">
+<span class="inline-block text-forest-700 font-label-sm text-label-sm uppercase tracking-[0.1em] mb-6">THE SOWAKA STORY</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">Wellbeing, balance and a sense of renewal.</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-6">
+<p class="">Sowaka represents happiness, wellbeing and a sense of harmony — a feeling of becoming lighter, calmer and more balanced.</p>
+<p class="">We believe the right environment and care can create space for the mind and body to restore balance. Sowaka is designed to be a place where holistic care and compassion come together.</p>
+</div>
+</div>
+<div class="md:col-span-6 relative">
+<div class="aspect-square overflow-hidden rounded-[2rem] shadow-elevated">
+<img alt="Serene clinic environment" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj-SjDfyykXc3G5DE8CY2frGCuZLZ1QarEGHYUgtsdAF_dbFvj9pEuCl519UEGat0jvlvHJr-HQN8Ry0QtVPP-MNZP1jSawKWuZ0wQwNbfqWeNnui5UPrrDebVnwYClrMdSKkjSaH7EZvNMb57m4x6QJdTSvc-VtetsW-ikrZwTCwcwKMy1I3KLx32x4GXpzVBf9jJe5YHuCCqZs_2R6EY9J0gSrNVh8W6zOdbe_LXEMqJ1nrYDoBu6WbKkz8or1eRUegzrm_-L1F_Mb0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- MEET SHWETA -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-background" id="meet-shweta" style="background-color: rgb(236, 244, 228);">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-center">
+<div class="md:col-span-5 order-2 md:order-1 relative">
+<div class="aspect-[4/5] overflow-hidden rounded-[2rem]">
+<img alt="Shweta Jaju" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkYnW4GG83RMFnWVDlVd3ufZiE0prgNUZLSF_4yOCaHqYmwPRWxjTROzIO6y3VhPihRut9oj9EO09eoyAxos2R6cLRwbDEGT5oHreTHju-T8Q4YR3Eo0v3Iu1fuxearIAZN0y2zMjyFjs_fMxmsOzF_NR_zjrOGZp4CqIOuV6iKzs-ha5WK1wvPXXfVXp21m8_NycBko7_PfJ9x7b6hWoSC7elgk6mQZ8ixkFJEv02nhG-0kacIyCq4UJjM3hXxDMeiFgP_jrLekw72r8"/>
+</div>
+<div class="absolute -bottom-8 -right-8 md:bottom-16 md:-right-16 bg-cream-50 p-8 rounded-3xl shadow-elevated border border-line-200/50 max-w-sm hidden lg:block">
+<p class="font-headline-md text-headline-md text-primary mb-4 text-xl">"True healing begins when someone finally listens."</p>
+<p class="font-label-sm text-label-sm text-muted-600 uppercase tracking-widest">— Shweta Jaju</p>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 lg:pl-12">
+<span class="inline-block text-forest-700 font-label-sm text-label-sm uppercase tracking-[0.1em] mb-6">MEET THE PRACTITIONER</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">Care begins with being heard.</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-6 mb-12">
+<p class="">
+                    I believe that your body has an innate intelligence and ability to heal itself. My role is to help you unlock that potential by truly understanding your unique needs.
+                </p>
+<p class="">
+                    With over a decade of experience in holistic health, I combine traditional wisdom with modern understanding to offer personalized therapies that support your journey to wellness. We don't just look at isolated symptoms; we look at you as a whole person.
+                </p>
+</div>
+<a class="inline-flex items-center gap-3 font-label-md text-label-md text-primary hover:text-forest-700 transition-colors group" href="#">
+<span class="border-b border-primary group-hover:border-forest-700 pb-1">Meet Shweta</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- PATIENT STORIES (Editorial Layout) -->
+<section class="py-20 bg-sage-100 overflow-hidden relative" id="stories" style="background-color: rgb(228, 236, 221);"><div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop mb-12 text-center"><h2 class="font-display-lg text-display-lg text-primary mb-4">Real experiences.</h2><p class="font-body-lg text-body-lg text-on-surface-variant">Hear from those who have found relief and balance at Sowaka.</p></div><div class="max-w-[1000px] mx-auto relative px-4 md:px-20 block" id="testimonial-carousel"><div class="flex justify-center gap-4 w-full items-start"><button class="w-12 h-12 flex items-center justify-center text-primary hover:text-forest-700 transition-colors z-20 mt-24" id="carousel-prev"><span class="material-symbols-outlined text-4xl">chevron_left</span></button><div class="overflow-hidden flex-1 relative testimonial-viewport" id="testimonial-viewport" style="height: 0px; transition: height 0.5s ease;"><div class="carousel-track flex transition-transform duration-700 ease-in-out items-start" id="carousel-track" style="transform: translateX(0%);"><div class="w-full shrink-0 flex flex-col items-center text-center px-4"><p class="font-headline-md text-primary uppercase tracking-widest mb-1 text-lg font-semibold">Rahul Londhe</p><p class="font-body-md text-muted-600 mb-6">Deputy Manager, R&amp;D at NRB Bearing Ltd</p><div class="w-12 h-[2px] bg-forest-700/30 mb-8"></div><p class="font-headline-md text-primary text-xl md:text-2xl italic leading-relaxed max-w-3xl mx-auto">"I suffered from vertigo and neck pain. It was so severe that my doctor suggested taking a break. After resting for a few weeks, my condition did not improve. One of my friends referred me to Shweta ji. During my consultation, she prescribed craniosacral therapy. To my surprise, within 4-5 sessions, my neck movement was completely normal. My neck pain and dizziness were also relieved. Later on I also joined her Yoga classes, which helped me to reduce stress and I used to be full of energy throughout the day. I also learned Jalneti from her, which helped me reduce my sinus issues. I would like to thank Shweta ji for providing me with holy yoga knowledge and changing my lifestyle."</p></div><div class="w-full shrink-0 flex flex-col items-center text-center px-4"><p class="font-headline-md text-primary uppercase tracking-widest mb-1 text-lg font-semibold">Pournima Singh</p><p class="font-body-md text-muted-600 mb-6">Mining Engineer</p><div class="w-12 h-[2px] bg-forest-700/30 mb-8"></div><p class="font-headline-md text-primary text-xl md:text-2xl italic leading-relaxed max-w-3xl mx-auto">"Starting the day with Shweta ji &amp; yoga practice feels to me like having energy shots that charge the rest of my day positively. It has made me calmer, added mindfulness to my daily life, made me fitter, built my stamina &amp; given me body awareness. It feels like I was asleep &amp; my body is suddenly awake. Our bodies and minds are well taken care of in this yoga class, which sets it apart from the rest. I could go on and on about this yoga class as I have gained an entire new perspective on yoga and meditation. It's been 6 months with her now but the impact it has had on my life is going to stay throughout. My heartfelt gratitude goes out to our dear teacher for all she has done for us."</p></div><div class="w-full shrink-0 flex flex-col items-center text-center px-4"><p class="font-headline-md text-primary uppercase tracking-widest mb-1 text-lg font-semibold">Jasbir Hanspal</p><p class="font-body-md text-muted-600 mb-6">Associate Category Manager</p><div class="w-12 h-[2px] bg-forest-700/30 mb-8"></div><p class="font-headline-md text-primary text-xl md:text-2xl italic leading-relaxed max-w-3xl mx-auto">"During my heart blockage treatment, I received acupuncture treatment as a complementary therapy. I'm very pleased with the results. As a result of Shweta's recommendation, I decided to undergo acupuncture treatment along with some lifestyle changes. She explained how acupuncture could potentially assist me with my condition and addressed all of my concerns and questions regarding it. As a result of these acupuncture sessions, I was able to manage my stress, reduce my hypertension, and control my diabetes. Also, the amount of blockages in my heart was negligible after clinical investigation. It was really helpful to implement these simple lifestyle changes. My slip disc condition and back pain were also treated along with this treatment. Shweta was highly knowledgeable and skilled at working with heart-related issues. The treatment sessions were extremely gentle, relaxing and I noticed improvements in my overall well-being with every passing session. Greatful to Shweta for her service. God bless her."</p></div><div class="w-full shrink-0 flex flex-col items-center text-center px-4"><p class="font-headline-md text-primary uppercase tracking-widest mb-1 text-lg font-semibold">Smrutiranjan Tripathy</p><p class="font-body-md text-muted-600 mb-6">Assistant Manager at Samsung</p><div class="w-12 h-[2px] bg-forest-700/30 mb-8"></div><p class="font-headline-md text-primary text-xl md:text-2xl italic leading-relaxed max-w-3xl mx-auto">"I recently visited Shweta for an acupuncture treatment and had an exceptional experience. Her expertise in acupuncture techniques was evident from the moment I stepped into their clinic. Not only did she have a vast knowledge of traditional Chinese medicine, but she also possessed a deep understanding of how to alleviate various ailments and promote overall well-being through acupuncture &amp; yoga. I was diagnosed as pre-diabetic after COVID-19 hit me so as usual doctors advised me to start the medicines. Since I was not keen on taking medicines for my entire life, one of my family friends suggested me try alternative medicine and hence I contacted Shweta. After listening to all my concerns carefully, she suggested acupuncture, cupping and kansa therapy. She made me feel comfortable and at ease throughout the sessions. Her calm and soothing behaviour created a relaxing atmosphere, which enhanced the treatment's effectiveness. Within a month's time, my blood sugar is in the normal range with her treatment. Her ability to pinpoint the root cause of the health issues really impressed me. She explained how stimulating different pressure points helps restore the body's balance and promote healing. Because of her clear and easy-to-understand explanations, I felt involved in my treatment. She also guided me in practicing yoga &amp; meditation specifically for diabetes. Her holistic approach to healing truly sets her apart. For anyone seeking natural and effective health solutions, I highly recommend her. I am grateful for the positive impact she has had on my health and well-being."</p></div><div class="w-full shrink-0 flex flex-col items-center text-center px-4"><p class="font-headline-md text-primary uppercase tracking-widest mb-1 text-lg font-semibold">Aarati Golatkar</p><p class="font-body-md text-muted-600 mb-6">Senior IT Professional</p><div class="w-12 h-[2px] bg-forest-700/30 mb-8"></div><p class="font-headline-md text-primary text-xl md:text-2xl italic leading-relaxed max-w-3xl mx-auto">"I have been doing Yoga for the past few years but I learnt a lot of innovative yoga rather than general yoga only through Shweta's Yoga classes. I am glad that I have a Yoga guru like her. Grateful for her holistic approach and the best teaching methods that she uses. For me the best part of the session is Meditation. I tried practicing meditation for a while now but she taught me the right approach of first being prepared for it and the perfect method of getting into that Meditational state so easily &amp; gain the maximum benefits out of it. Can't thank her enough as I start my day doing the Yoga and Meditation with the best teacher and community out there."</p></div></div></div><button class="w-12 h-12 flex items-center justify-center text-primary hover:text-forest-700 transition-colors z-20 mt-24" id="carousel-next"><span class="material-symbols-outlined text-4xl">chevron_right</span></button></div></div><div class="flex flex-col items-center justify-center px-4 mt-8 gap-6"><div class="flex gap-3" id="carousel-dots"><button class="w-2.5 h-2.5 rounded-full transition-all duration-300 dot-btn bg-primary/20" data-index="0"></button><button class="w-2.5 h-2.5 rounded-full transition-all duration-300 dot-btn bg-primary/20" data-index="1"></button><button class="w-2.5 h-2.5 rounded-full transition-all duration-300 dot-btn bg-primary w-6" data-index="2"></button><button class="w-2.5 h-2.5 rounded-full transition-all duration-300 dot-btn bg-primary/20" data-index="3"></button><button class="w-2.5 h-2.5 rounded-full transition-all duration-300 dot-btn bg-primary/20" data-index="4"></button></div><a class="inline-flex items-center justify-center bg-primary text-white font-label-md text-label-md px-10 py-4 rounded-full hover:bg-primary-container transition-all shadow-elevated" href="https://www.thesowaka.com/testimonials">Read more reviews!</a></div></section>
+<script>
+(function () {
+    function initTestimonialCarousel() {
+        const track = document.getElementById('carousel-track');
+        const prevBtn = document.getElementById('carousel-prev');
+        const nextBtn = document.getElementById('carousel-next');
+        const dots = document.querySelectorAll('#carousel-dots .dot-btn');
+        const container = document.getElementById('testimonial-carousel');
+        const viewport = document.getElementById('testimonial-viewport');
+
+        if (!track || !container || !viewport) return;
+
+        const slides = Array.from(track.children);
+        const totalSlides = slides.length;
+        if (!totalSlides) return;
+
+        let currentIndex = 0;
+        let autoPlayInterval = null;
+        let startX = 0;
+        let isDragging = false;
+
+        function measureActiveSlide() {
+            const activeSlide = slides[currentIndex];
+            if (!activeSlide) return;
+
+            // Measure ONLY the active slide. Temporarily neutralize any accidental
+            // height constraint on the slide itself, without measuring the track.
+            const previousHeight = activeSlide.style.height;
+            activeSlide.style.height = 'auto';
+            const height = activeSlide.getBoundingClientRect().height;
+            activeSlide.style.height = previousHeight;
+
+            if (height > 0) {
+                viewport.style.height = Math.ceil(height) + 'px';
+            }
+        }
+
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                const active = index === currentIndex;
+                dot.classList.toggle('bg-primary', active);
+                dot.classList.toggle('bg-primary/20', !active);
+                dot.classList.toggle('w-6', active);
+            });
+        }
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+
+            // Wait for the browser to apply the new transform before measuring.
+            requestAnimationFrame(() => {
+                requestAnimationFrame(measureActiveSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            if (index < 0 || index >= totalSlides) return;
+            currentIndex = index;
+            updateCarousel();
+            startAutoplay();
+        }
+
+        function startAutoplay() {
+            stopAutoplay();
+            autoPlayInterval = window.setInterval(nextSlide, 8000);
+        }
+
+        function stopAutoplay() {
+            if (autoPlayInterval) {
+                window.clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+            }
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                startAutoplay();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                startAutoplay();
+            });
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goToSlide(parseInt(dot.dataset.index, 10));
+            });
+        });
+
+        container.addEventListener('mouseenter', stopAutoplay);
+        container.addEventListener('mouseleave', startAutoplay);
+
+        container.addEventListener('touchstart', e => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            stopAutoplay();
+        }, { passive: true });
+
+        container.addEventListener('touchend', e => {
+            if (!isDragging) return;
+            isDragging = false;
+            const diff = startX - e.changedTouches[0].clientX;
+
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextSlide() : prevSlide();
+            }
+            startAutoplay();
+        }, { passive: true });
+
+        // Re-measure after fonts/layout settle and when the viewport changes.
+        window.addEventListener('load', measureActiveSlide);
+        window.addEventListener('resize', measureActiveSlide);
+
+        updateCarousel();
+        startAutoplay();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTestimonialCarousel);
+    } else {
+        initTestimonialCarousel();
+    }
+})();
+</script>
+<!-- THERAPIES -->
+<div class="py-4 flex items-center justify-center bg-cream-50"><div class="w-4/5 flex items-center justify-center relative"><div class="absolute w-full h-[1px] bg-forest-700/20" style="background-color: rgba(12, 52, 36, 0.2);"></div><div class="relative px-4 bg-transparent"><span class="material-symbols-outlined text-[10px] text-forest-700" style="color: rgba(12, 52, 36, 0.5); font-size: 6px;">diamond</span></div></div></div><section class="py-20 px-margin-mobile md:px-margin-desktop bg-background" id="therapies" style="background-color: rgb(240, 242, 230);">
+<div class="max-w-[1200px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24 items-start">
+<div class="lg:col-span-5 lg:sticky lg:top-32">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Different tools.<br/>One approach.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                    We draw from a range of holistic practices to create a treatment plan that addresses your specific needs.
+                </p>
+<div class="rounded-[2rem] overflow-hidden shadow-elevated hidden lg:block aspect-[4/3]"><style>
+  @keyframes crossfade {
+    0%, 16.66% { opacity: 1; }
+    20%, 96.66% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .rotator-container img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: crossfade 30s infinite ease-in-out;
+  }
+  .rotator-container img:nth-child(1) { animation-delay: 0s; }
+  .rotator-container img:nth-child(2) { animation-delay: 5s; }
+  .rotator-container img:nth-child(3) { animation-delay: 10s; }
+  .rotator-container img:nth-child(4) { animation-delay: 15s; }
+  .rotator-container img:nth-child(5) { animation-delay: 20s; }
+  .rotator-container img:nth-child(6) { animation-delay: 25s; }
+</style>
+<div class="rotator-container relative w-full h-full">
+<img alt="Wellness Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYQUz_XARdXY49ZQf2e38On7v30VJpHw6FtD32_lBJNnkfljgQbH1lInx-OaX30bmqTQ1kmvgBcCXXPChwVDNMeJfcC3FdFLY7hf2NuUQmpT0FUESu1PeDe1C7WdAIT17uP6SJiAT7muUbYuylFjelxtEt-8PDsnlHJjvpG9QPJO_k75cfZlCIcSHoZMA34Q0vOPSkT9rkNCpzvXkPn_uKGE1P_wm8hT6LoEQEzrlacARhNYg8cOZdqcd7kedMhOY-RQQ"/>
+<img alt="Therapeutic Yoga" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHVZpvdhoDO9OqMNNCuGkfnnrhFqWWDPOOPp-6gwzH26lJk3nRGAwfsbEptLE8i2oovzSQ9C8yUBAqgiNHEHTdvALfvj5tr18BESF8uP54P-Pt8Rw-PTIej8YCIykVib4AytYnyDVtkGfDuv2YNpTCaFOaP0ag-oIRRn5xbIDxj987SrHZ8dkDigfqFPO48YrNXIFUuJ3ZoyYOIMsDZs8z-K2BzYti6n0kVrOjVMwRBJbMIuxVy618tQ3g3jC8aQONpmU"/>
+<img alt="Acupuncture Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmGknlcVdPfWCV483uu4hKH75rPhh_EVUKmI-0lR5mIlyTAvSGR2_CLIwpgcxjTZtJRJjUb5bEL3K0b3OG8zmH0oNBR1N6UrdogeXbL_Oqyv-VrU6tO02SJNbODL40l9kwvDzJACfKlFs-OCJT7FX5xdQcZlV0g4Tf3dEcfmYDN7D1h6XFQP8XObYsUOmseav4fUy8j3XdwEoXWFE2kH9DtEEvLTg3MkPwulVl4LUob71er9t3xApygeAUrD90ij0G8y0"/>
+<img alt="Acupressure Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0bQzkUI0pQ2HDsDpPC4SNhqEQdMcrOfmqHX4kDenLXX4kDW-QQRHUS5Z5QE2kKRJsRU_xQDVFk7UoqYrSazuf9ACaoBoppqc6WSBroQdWbEmUb0xKRqlX2qT8Km9WEOCaahRrtZKNcZZR3QeB8i3fnRpnPaIi1h_LT2ttVW710lrwS7HTvHOiOWgPATnYePT40kRLfHq-TcUH2fvWsdDt3GNWDaWrYYMIncBRwG22Rc0U4ZxCgvjZXkIhZDXBF9vrTyI"/>
+<img alt="Cupping Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJhlyZUB4HsXZ8NfnE6omWbA__NbqyDKAmWnVQXBkF582n4_XVmAxIUxUoHwb2J_G8wa4P2unsStcJOyvj3_CxXjz1YaoA78ggY_eIhzJ7MxVvnLY7525T6KIgqEaqSDw8ONLcnMBknzJuRy88EZaOOq7AueIZf9Qc0n729Pejq0NS5UJMij3Vk9HKj-tEcE9Jq-f9KGwdJI5gh9QnFmyOQ7M1NAkfR2A0KgsEOKRVCjWK1JuxejgTpHC_3rLMCuPFA70"/>
+<img alt="Craniosacral Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIr0MLJ_6V5ZprvXjoy2PUn4X2uboyk7b4SMo8HC7FlVnEZFaEe6rnd6PnCSzoxx_hYlhVSeIyCbn4Z0adSzqrl1C9s_2bQllH0ZHfhlJPIIylMc4ZlmkGU4Z5WQpVOM8vGvO0F6VpyUOlu87HhkIbsVlXZWnStc0NmNp2hhvcwS7EBxDHs8kxdFYaH2rtoXNmSpIKOVHKIWCHNT-9I2TJq36SX85z56pa_m73gOobqqr4aeA4FK_EtnRkuCakEmqvGI"/>
+</div></div>
+</div>
+<div class="lg:col-span-7">
+<div class="rounded-[2rem] overflow-hidden shadow-elevated mb-12 lg:hidden aspect-video"><div class="rotator-container relative w-full h-full">
+<img alt="Wellness Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWK5XrVvR0OIl5LHFi7AWGLD7A1-347bF1aBLKRAG7ue-eG_OQElYB2RjunnYajUhth9O-Jkl4UucfiZjBqg3mlmvAfgtTizi5Bzqyw-EU-4cVLfniUT5BRpxgaSYmCbClOJnQRKweYAemYKzc4qiRqYvYcdKV6MPRFAeudMTT6H5MRXXjhWEYX-if40WG8MARda1QYD9l9yTYAgeDMBsOtLsYw9ltUL4Kke8UhWA7LmLBe7KjRz9zpeYBBwJ5GVMrQnE"/>
+<img alt="Therapeutic Yoga" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoPTIiQA0o7hfHSM6arGtQy2PqunmUFotCx-tNukJugt3och3Bdfa1eTzEHHSdrbHmiN-tIfEAUH6EWwd1hlG9Sr2oDdwKHug0BbNAM7SbNPMhk4zizzQ5-m5wTA0bOKNteY_FLCtHJl0I9tLA0yAVe4Z8nz_3M1MI8OvmxWj4DfmuGOFUF4xVUQjV3ynmovloKcSsGyID6xp2fLg6at35ZM3hffV0z9DAeLH8Jvo2_k4qPvCpQeoQ5OYcidcT8v0ntLw"/>
+<img alt="Acupuncture Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqr2ohCbKcYY8VmMr79vLrVL6g83v_rjr_Xk4e30BW9WDav7GMEacxB_90S9SIYJAa-ldiKUDL-Mov1RcARgHjKLcg6jBOa09DoFn784czzgXH9yTQq4tPAu6pKCtLE6CRJSvXdrJKR3fkYMzTdtSiM10z2-wOmQDdm-2V0RogC6lMlujdO7DMMOEAstZInvPQpvSfG4J1k-4iNIKAyVIaF3t1PK9x2eQD9aQxwCCI8RxePsUPuuW8yl85CWZIwdUz3lI"/>
+<img alt="Acupressure Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPmHcy9mG_gA2u4N1TLerdSylTmTPSXRLMLVclFZSBAp5Cq_AfRhsTht4bQjv-W9WQUMXGC9MP5o1a-dGWUzYglFmB7t2XTnDahWeJ1b6uIvtIG2_CIEqwzzSRDF3jIcnBtjAt5QHKQaq1DR8J3vtKUVQDyRtaelatGjQPf-E6bdoJAKLbrPjBJAAbz5oDzRoSdB0l7b035VXR7bIJfck7UTKv9XwLRt9VWZVMcwhdv-962Vcafvdtk1IKEf-8PQTCYhA"/>
+<img alt="Cupping Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwToSSlfQv9zsTy3p7Mvx6ouk2YyVMQrF46Rzzh4EySHoLv2YDw9fa5Pb4ylxot92sCPI7PdUhhyKh59T71wAYr56GyZlNHnZk79rvDBwFZtxWUXDec810Ymhv5_Aj_S30O1FqaGXyUSULbzxC-vDxgof6B37JaoM1GwxXAQBvzkMfXymWNmfr6egdx7t5x_DPXQ__oUjEOlwddDm8nGrN6FPYEzctLWDJqGNei9Ap2INMgC2cjypS0mPiFZvRl90Fqq4"/>
+<img alt="Craniosacral Therapy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTD4fj5i0BCAK2iGEKYTOeXtPMvmoVZq5GeZs-vuDmRDEeMieE4r05DE4eSRStYgoamZF9H1XaaOAPL470M7Egl4dCgB4qxgNHk688wYaxLuqN0Wr1Itt6GDcn3i5vm1GY5SqrfFPKykfDLVmG2QEuYKE_cRWGdJsv7A3gCEv5wGEPbcqik-3S5AbsqGv92u42nimUUMeGL39hDBYsbu47imzl7sBE3CvHJ3m5RyrN7fl8tMr7M5PbsQ7-eCzmPrDnjAs"/>
+</div></div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
+<div class="border-t border-line-200 pt-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 text-2xl">Acupuncture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Stimulating specific points to balance energy flow and promote natural healing.</p>
+</div>
+<div class="border-t border-line-200 pt-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 text-2xl">Cupping Therapy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Relieving tension and improving circulation through localized suction.</p>
+</div>
+<div class="border-t border-line-200 pt-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 text-2xl">Craniosacral Therapy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Gentle touch to release tension deep in the body to relieve pain and dysfunction.</p>
+</div>
+<div class="border-t border-line-200 pt-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 text-2xl">Acupressure</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Applying physical pressure to acupuncture points to clear blockages in meridians.</p>
+</div>
+<div class="border-t border-line-200 pt-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 text-2xl">Therapeutic Yoga</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored movement and breathwork to support your specific physical and mental state.</p>
+</div>
+<div class="border-t border-line-200 pt-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 text-2xl">Wellness Therapies</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Integrating lifestyle, nutritional, and herbal guidance for comprehensive care.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS (Refined) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-cream-50" id="approach" style="background-color: rgb(236, 244, 228);">
+<div class="max-w-[1000px] mx-auto">
+<div class="text-center mb-20 md:mb-12">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Care that starts with understanding.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A gentle, structured approach to your wellbeing.</p>
+</div>
+<div class="space-y-0">
+<!-- Step 1 -->
+<div class="flex flex-col md:flex-row py-12 md:py-16 border-t border-line-200/60 relative">
+<div class="md:w-1/3 mb-6 md:mb-0 pr-8">
+<span class="block font-headline-md text-5xl text-forest-700/20 mb-4">01</span>
+<h3 class="font-headline-md text-headline-md text-primary text-3xl">Understand</h3>
+</div>
+<div class="md:w-2/3 md:pt-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">We begin with a detailed consultation to understand your medical history, current concerns, and wellness goals. We listen closely to the complete picture of your health.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col md:flex-row py-12 md:py-16 border-t border-line-200/60 relative">
+<div class="md:w-1/3 mb-6 md:mb-0 pr-8">
+<span class="block font-headline-md text-5xl text-forest-700/20 mb-4">02</span>
+<h3 class="font-headline-md text-headline-md text-primary text-3xl">Guide</h3>
+</div>
+<div class="md:w-2/3 md:pt-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Based on our understanding, we gently guide you through the potential therapeutic options, explaining how they work and what you can expect.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col md:flex-row py-12 md:py-16 border-t border-line-200/60 relative">
+<div class="md:w-1/3 mb-6 md:mb-0 pr-8">
+<span class="block font-headline-md text-5xl text-forest-700/20 mb-4">03</span>
+<h3 class="font-headline-md text-headline-md text-primary text-3xl">Personalize</h3>
+</div>
+<div class="md:w-2/3 md:pt-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">We design a tailored treatment plan integrating the most suitable therapies. This plan adapts as your body responds and your needs change.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col md:flex-row py-12 md:py-16 border-t border-b border-line-200/60 relative">
+<div class="md:w-1/3 mb-6 md:mb-0 pr-8">
+<span class="block font-headline-md text-5xl text-forest-700/20 mb-4">04</span>
+<h3 class="font-headline-md text-headline-md text-primary text-3xl">Review</h3>
+</div>
+<div class="md:w-2/3 md:pt-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Regular check-ins ensure we are on the right path, celebrating progress and refining our approach to support your sustained wellbeing.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LOCATIONS (Substantial Block) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-background" id="location" style="background-color: rgb(240, 242, 230);">
+<div class="max-w-[1200px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-[2rem] overflow-hidden shadow-elevated border border-line-200/50">
+<!-- Content Half -->
+<div class="lg:col-span-5 bg-paper-0 p-10 md:p-16 flex flex-col justify-center" style="background-color: rgb(252, 252, 244);">
+<span class="inline-block text-forest-700 font-label-sm text-label-sm uppercase tracking-[0.1em] mb-4">VISIT US</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">Find Sowaka.</h2>
+<div class="space-y-8">
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wider">Clinic Address</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant"><strong class="">J.B. NAGAR:</strong> 1, Ground floor, Shri Rajasthan Recreation Club, Behind Piramal Garden, J B Nagar, Andheri E, Mumbai<br class=""/><br class=""/><strong class="">JVLR:</strong> Shop No. 43, Wing A2, Jogeshwari–Vikhroli Link Road, Greenfields, Andheri East, Mumbai, Maharashtra 400093</p>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wider">Contact</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">+91 9967350201<br class=""/>contact.sowaka@gmail.com</p>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row gap-4"><a class="inline-flex items-center justify-center bg-primary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-colors shadow-elevated w-full sm:w-auto" href="#">Book Consultation</a><a class="inline-flex items-center justify-center bg-primary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-colors shadow-elevated w-full sm:w-auto" href="#">Get Directions</a></div>
+</div>
+</div>
+<!-- Map Half -->
+<div class="lg:col-span-7 bg-surface-container-low min-h-[400px] lg:min-h-full relative">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 bg-sage-100 flex items-center justify-center overflow-hidden"><iframe allowfullscreen="" class="w-full h-full" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.000000000000!2d72.86000000000001!3d19.110000000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83976620001%3A0x7600000000000000!2sShri%20Rajasthan%20Recreation%20Club!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" style="border: 0px;" width="100%"></iframe></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-cream-50" id="faq" style="background-color: rgb(236, 244, 228);">
+<div class="max-w-[800px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 text-4xl">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<details class="group bg-paper-0 rounded-2xl shadow-sm border border-line-200/50 overflow-hidden" open="" style="background-color: rgb(252, 252, 244);">
+<summary class="flex items-center justify-between p-8 cursor-pointer list-none font-headline-md text-headline-md text-primary text-xl">
+<span class="">What happens during a first consultation?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<div class="p-8 pt-0 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p class="">Your first consultation is an in-depth conversation about your health history, current concerns, and lifestyle. We'll discuss your goals and I may perform a brief physical assessment. From there, we will outline a proposed treatment plan tailored to your individual needs.</p>
+</div>
+</details>
+<details class="group bg-paper-0 rounded-2xl shadow-sm border border-line-200/50 overflow-hidden" style="background-color: rgb(252, 252, 244);">
+<summary class="flex items-center justify-between p-8 cursor-pointer list-none font-headline-md text-headline-md text-primary text-xl">
+<span class="">Do I need to prepare anything before my visit?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<div class="p-8 pt-0 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p class="">Please wear comfortable, loose-fitting clothing. It's best to have eaten a light meal an hour or two before your appointment. If you have any recent medical reports or imaging relevant to your condition, please bring them along.</p>
+</div>
+</details>
+<details class="group bg-paper-0 rounded-2xl shadow-sm border border-line-200/50 overflow-hidden" style="background-color: rgb(252, 252, 244);">
+<summary class="flex items-center justify-between p-8 cursor-pointer list-none font-headline-md text-headline-md text-primary text-xl">
+<span class="">How many sessions will I need?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<div class="p-8 pt-0 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p class="">The number of sessions varies greatly depending on whether your condition is acute or chronic, and how your body responds to treatment. We will discuss a realistic timeline during your initial consultation and review progress regularly. We focus on practitioner-led guidance rather than guarantees.</p>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- FINAL CTA -->
+<section class="relative py-32 md:py-48 px-margin-mobile md:px-margin-desktop overflow-hidden" style="background-color: rgb(12, 52, 36);">
+<div class="absolute inset-0 z-0">
+<img alt="Calm treatment room" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp2luz3Ex6hsnS6zSwen5Ie_7x1V7izOoQHSWPjat1pfhv9RaU-3pQZrIV6FYJUCFKNSKq432Iik2iBDbW5It7WyNAK4Y-aUF-xE7jAY_aKyITT8B1wJUucZ15lyA5NlRuGLP0OaPk5q7XQ3feHTXa6bTzvi4ySp6ARRBLEJagCfzM_f6qh8eCDHJU61dCTFxTgCNv1T8whRYHXTJZlypGB3zDq4itIMz9_6kOeyNMvuzS3bt45l0s6E-MehXjGV65yjI"/>
+<div class="absolute inset-0 bg-forest-700/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8">You don't need to know which therapy you need.</h2>
+<p class="font-body-lg text-body-lg text-cream-50/90 mb-12 max-w-2xl mx-auto text-xl">Start by telling us what's bothering you. We'll figure out the rest together.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6"><a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary-container text-white font-label-md text-label-md px-10 py-5 rounded-full hover:opacity-90 transition-colors shadow-elevated" href="#">Book a Consultation</a><a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary-container text-white font-label-md text-label-md px-10 py-5 rounded-full hover:opacity-90 transition-colors shadow-elevated" href="#">WhatsApp Sowaka</a></div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 px-gutter md:px-margin-desktop md:mb-0 mb-20 bg-primary-container text-white" style="background-color: rgb(12, 52, 36);">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+<div class="md:col-span-5">
+<a class="font-display-lg text-headline-md block mb-6 text-3xl text-white" href="#">Sowaka</a>
+<p class="font-body-md text-body-md mb-6 max-w-sm text-sage-100">Holistic pain management and everyday wellbeing, guided by deep understanding and personalized care.</p>
+</div>
+<div class="md:col-span-3 md:col-start-7">
+<h4 class="font-label-md text-label-md mb-6 uppercase tracking-wider text-white">Explore</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md hover:text-white transition-colors text-sage-100" href="#practices">Practices</a></li>
+<li class=""><a class="font-body-md text-body-md hover:text-white transition-colors text-sage-100" href="#stories">Stories</a></li>
+<li class=""><a class="font-body-md text-body-md hover:text-white transition-colors text-sage-100" href="#approach">Approach</a></li>
+<li class=""><a class="font-body-md text-body-md hover:text-white transition-colors text-sage-100" href="#faq">FAQ</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-label-md text-label-md mb-6 uppercase tracking-wider text-white">Contact</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md hover:text-white transition-colors text-sage-100" href="#">+91 [Phone Placeholder]</a></li>
+<li class=""><a class="font-body-md text-body-md hover:text-white transition-colors text-sage-100" href="#">[Email Placeholder]</a></li>
+<li class="font-body-md text-body-md mt-6 text-sage-100">Sowaka Holistic Health<br/>Mumbai, Maharashtra</li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto pt-8 border-t border-line-200/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-sage-100">© 2024 Sowaka Holistic Health. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm hover:text-white transition-colors text-sage-100" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm hover:text-white transition-colors text-sage-100" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+    function initWhatBringsRotation() {
+        const cards = document.querySelectorAll('#animated-cards-container [data-category]');
+        cards.forEach((card, cardIndex) => {
+            const target = card.querySelector('.rotating-condition');
+            if (!target) return;
+
+            let values;
+            try { values = JSON.parse(target.dataset.conditions || '[]'); } catch (e) { values = []; }
+            if (!Array.isArray(values) || values.length < 2) return;
+
+            let index = 0;
+            const rotate = () => {
+                target.style.opacity = '0';
+                target.style.transform = 'translateY(6px)';
+                window.setTimeout(() => {
+                    index = (index + 1) % values.length;
+                    target.textContent = values[index];
+                    target.style.opacity = '1';
+                    target.style.transform = 'translateY(0)';
+                }, 220);
+            };
+
+            target.style.display = 'inline-block';
+            target.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+            window.setTimeout(() => {
+                window.setInterval(rotate, 5000);
+            }, cardIndex * 450);
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWhatBringsRotation);
+    } else {
+        initWhatBringsRotation();
+    }
+})();
+</script>
+</body></html>
